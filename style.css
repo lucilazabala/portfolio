@@ -33,7 +33,7 @@ header {
   top: 0;
   z-index: 9999;
   background: var(--black);
-  box-shadow: 0 0 25px #000;
+  box-shadow: 0 0 25px #00000099;
 }
 
 /* Desktop Nav Menu */
@@ -43,7 +43,7 @@ header {
   align-items: center;
   padding: 40px;
   background: var(--black);
-  box-shadow: 0 0 25px #000;
+  box-shadow: 0 0 25px #00000099;
   color: white;
 }
 
@@ -85,7 +85,8 @@ header {
 }
 
 .menu a:hover {
-  color: #8e8e8e;
+  color: #a80000;
+  text-shadow: 0 0 25px #8a0000;
 }
 
 /* Mobile Nav Menu */
@@ -160,6 +161,15 @@ h2 {
   font-size: 60px;
   letter-spacing: 2px;
   padding: 5px;
+  transition: all 0.5s ease;
+}
+
+#home:hover h2,
+#about-me:hover h2,
+#services:hover h2,
+#projects:hover h2,
+#contact:hover h2 {
+  letter-spacing: 5px;
 }
 
 .h2-v2 {
@@ -174,24 +184,45 @@ h3 {
   font-size: 36px;
   font-weight: 400;
   padding: 5px;
+  transition: all 0.5s ease-in-out;
+}
+
+#home:hover h3 {
+  color: var(--h4);
 }
 
 h4 {
   color: var(--h4);
-  font-size: 30px;
+  font-size: 20px;
   font-weight: 400;
-  padding: 100px;
+  padding: 40px 0;
 }
 
 .h4-v2 {
   color: var(--h4);
-  text-shadow: 0 0 25px #fff0;
-  transition: all 0.5s;
+  transition: all 0.5s ease-in-out;
+  transition-delay: 0.3s;
 }
 
-#home:hover .h4-v2 {
+#home:hover .h4-v2,
+#about-me:hover .h4-v2,
+#services:hover .h4-v2,
+#projects:hover .h4-v2,
+#contact:hover .h4-v2 {
   color: #a80000;
   text-shadow: 0 0 25px #8a0000;
+}
+
+.h4-link {
+  color: var(--h4);
+  text-decoration: underline solid var(--h4);
+  transition: all 0.5s ease-in-out;
+}
+
+.h4-link:hover {
+  color: #b0b0b0;
+  background-color: #353535;
+  text-decoration: underline solid #353535;
 }
 
 /* Texts Mobile */
@@ -210,8 +241,37 @@ h4 {
 
   h4 {
     padding: 30px 20px;
-    font-size: 18px;
+    font-size: 14px;
   }
+}
+
+/* Images Desktop */
+img {
+  filter: saturate(0);
+  transition: all 0.5s ease-in-out;
+}
+
+#home:hover img,
+#about-me:hover img,
+#services:hover img,
+#projects:hover img,
+#contact:hover img {
+  filter: saturate(1);
+}
+
+.about-me-img {
+  width: 300px;
+  height: 300px;
+  border: 6px solid #2e2e2e;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  transition: all 0.5s ease-in-out;
+}
+
+#about-me:hover .about-me-img {
+  border: 6px solid #a80000;
+  box-shadow: 0 0 50px #8a0000;
 }
 
 /* Sections Desktop */
@@ -219,8 +279,28 @@ main {
   display: grid;
 }
 
-.text {
+.home-container {
   width: 70%;
+}
+
+.about-me-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin: auto;
+}
+
+.about-me-text {
+  width: 60%;
+  text-align: left;
+  padding: 0px 35px;
+  border-radius: 30px;
+  transition: all 0.7s ease-in-out;
+}
+
+#about-me:hover .about-me-text {
+  background: #1717176e;
 }
 
 #home,
