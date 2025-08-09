@@ -28,6 +28,29 @@ body {
   background-size: 100% 100%;
 }
 
+/* Scrollbar */
+body::-webkit-scrollbar {
+  width: 10px;
+}
+body::-webkit-scrollbar-track {
+  background-color: #000;
+  border-radius: 0px;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #2b2b2b;
+  border-radius: 50px;
+}
+body::-webkit-scrollbar-thumb:hover {
+  background-color: #6b6b6b9a;
+  border-radius: 50px;
+}
+
+/* Selection */
+::selection {
+  background: #3b3b3b68;
+  color: #6b6b6b;
+}
+
 /* Header */
 header {
   position: sticky;
