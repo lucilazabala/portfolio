@@ -656,8 +656,9 @@ footer:hover .name {
   }
 
   .gallery {
-    gap: 37px;
-    padding: 40px 0 0 0;
+    gap: 28px;
+    padding: 40px 30px 0 30px;
+    flex-wrap: inherit;
   }
 }
 
@@ -716,7 +717,7 @@ footer:hover .name {
   }
 
   h4 {
-    padding: 20px 5px;
+    padding: 0 3px 20px 3px;
     font-size: 14px;
     text-align: justify;
   }
@@ -797,8 +798,13 @@ footer:hover .name {
     gap: 3px;
   }
 
+  .services-container {
+    padding: 10px 20px;
+    gap: 22px;
+  }
+
   .services-card {
-    width: 100%;
+    width: 31%;
     border-radius: 30px;
     padding: 20px 0;
   }
@@ -810,11 +816,6 @@ footer:hover .name {
   .services-card > h4 {
     padding: 14px 10px 0 10px;
     text-align: center;
-  }
-
-  .services-container {
-    padding: 10px 20px;
-    gap: 25px;
   }
 
   .h4-link-services {
@@ -837,11 +838,33 @@ footer:hover .name {
   }
 
   .gallery {
-    padding: 0 0 20px 0;
-    flex-wrap: wrap;
+    padding: 0 10px 8px 10px;
+    flex-wrap: inherit;
+    gap: 12px;
   }
 
   .gallery img {
-    width: 87%;
+    width: 100%;
+  }
+}
+
+/* 768px */
+@media (max-width: 767px) {
+  .services-container {
+    gap: 25px;
+  }
+
+  .services-card {
+    width: 100%;
+  }
+
+  .gallery {
+    padding: 0 0 20px 0;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .gallery img {
+    width: 80%;
   }
 }
